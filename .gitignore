@@ -1,0 +1,6 @@
+# Material original del cliente y notas internas: no forman parte de la web
+material/
+material-para-el-cliente.txt
+
+# Capturas de pruebas
+.playwright-mcp/

@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS Film | Fotografía y cine</title>
+  <meta name="description" content="Portfolio de CS Film: fotografía editorial, retrato, eventos y cortometrajes. Disponible para marcas, agencias y productoras.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="CS Film | Fotografía y cine">
+  <meta property="og:description" content="Retrato, moda y cortometrajes. Fotografía fija y dirección de fotografía.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect y='9' width='32' height='14' fill='%23E7E6E2'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    /* Marca JS activo y decide si mostrar el loader (una vez por sesión, nunca con movimiento reducido). */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try {
+        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduced && !sessionStorage.getItem('csf-intro')) d.classList.add('intro');
+      } catch (e) {}
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#trabajo">Saltar al trabajo</a>
+
+  <!-- Loader: el nombre comprimido y un timecode que corre mientras carga la imagen principal -->
+  <div class="loader" aria-hidden="true" data-loader>
+    <p class="loader-name">CS Film</p>
+    <p class="loader-tc" data-loader-tc>00:00:00:00</p>
+  </div>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio">CS Film</a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#cine">Cine</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>Menú</button>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav aria-label="Principal (móvil)">
+      <ul>
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#cine">Cine</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <p class="menu-foot"><a href="mailto:hola@csfilm.com.ar">hola@csfilm.com.ar</a></p>
+  </div>
+
+  <!-- Timecode de scroll: 1 px de scroll = 1 fotograma a 24 fps -->
+  <div class="hud" aria-hidden="true" data-hud>
+    <span class="hud-dot"></span>
+    <span class="hud-tc" data-hud-tc>00:00:00:00</span>
+    <span class="hud-scene" data-hud-scene>Inicio</span>
+  </div>
+
+  <main>
+    <!-- ESCENA: Inicio -->
+    <section class="hero scene scene--dark" id="inicio" data-scene="Inicio">
+      <div class="hero-frame">
+        <picture>
+          <source media="(max-width: 720px)"
+            srcset="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=70&w=720&h=900 720w,
+                    https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=70&w=1080&h=1350 1080w"
+            sizes="100vw">
+          <img class="hero-media"
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=72&w=1800&h=753"
+            srcset="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=72&w=1200&h=502 1200w,
+                    https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=72&w=1800&h=753 1800w,
+                    https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=72&w=2600&h=1088 2600w"
+            sizes="100vw"
+            alt="Ruta desierta entre montañas de roca roja al amanecer"
+            fetchpriority="high" decoding="async">
+        </picture>
+        <!--
+          Para usar un loop de video en lugar de la foto, reemplazá <picture> por:
+          <video class="hero-media" autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg">
+            <source src="media/hero-loop.webm" type="video/webm">
+            <source src="media/hero-loop.mp4" type="video/mp4">
+          </video>
+          (Recomendado: 8–12 s, 1920 px de ancho, sin audio, menos de 4 MB.)
+        -->
+        <p class="hero-caption">Fotograma de <em>Kilómetro cero</em>, 2025. Anamórfico 2.39:1.</p>
+      </div>
+
+      <div class="hero-titles">
+        <h1 class="hero-name">CS Film<span class="visually-hidden">, fotografía y cine</span></h1>
+        <div class="hero-meta">
+          <p class="hero-lede"><strong>Fotografía y cine.</strong> Retrato, moda y cortometrajes hechos con luz natural, equipos chicos y tiempo para mirar. Con base en Buenos Aires, disponible para viajar.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#trabajo">Ver trabajo</a>
+            <a class="text-link" href="#contacto">Pedir presupuesto</a>
+          </div>
+          <p class="availability"><span class="dot" aria-hidden="true"></span>Agenda abierta desde febrero 2027</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA: Trabajo (fotografía fija) -->
+    <section class="scene scene--dark work" id="trabajo" data-scene="Trabajo">
+      <header class="scene-head">
+        <h2 class="scene-title" data-reveal="title">Trabajo<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+        <p class="scene-intro" data-reveal>Fotografía fija para revistas, marcas y personas. Elegí un tipo de encargo o recorré todo.</p>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filtrar trabajos por categoría" data-filters>
+        <button type="button" aria-pressed="true" data-filter="all">Todo <sup>12</sup></button>
+        <button type="button" aria-pressed="false" data-filter="editorial">Editorial <sup>3</sup></button>
+        <button type="button" aria-pressed="false" data-filter="retrato">Retrato <sup>3</sup></button>
+        <button type="button" aria-pressed="false" data-filter="eventos">Eventos <sup>3</sup></button>
+        <button type="button" aria-pressed="false" data-filter="comercial">Comercial <sup>3</sup></button>
+      </div>
+      <p class="visually-hidden" aria-live="polite" data-filter-status></p>
+
+      <ul class="gallery" data-gallery>
+        <li class="shot s-7" data-cat="editorial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&q=80&w=2200">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=1400&h=933"
+                srcset="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=800&h=533 800w,
+                        https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=70&w=1400&h=933 1400w"
+                sizes="(max-width: 720px) 100vw, 58vw"
+                alt="Modelo con pantalón amarillo junto a un aro de básquet bajo cielo celeste">
+            </span>
+            <span class="shot-info"><span class="shot-title">Amarillo de mediodía</span><span class="shot-meta">Editorial. Revista Pampa, 2026</span></span>
+          </button>
+        </li>
+        <li class="shot s-5 drop" data-cat="retrato" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=70&w=1000&h=1250"
+                srcset="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=70&w=640&h=800 640w,
+                        https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=70&w=1000&h=1250 1000w"
+                sizes="(max-width: 720px) 92vw, 42vw"
+                alt="Retrato de una mujer de pelo oscuro sobre fondo rosa">
+            </span>
+            <span class="shot-info"><span class="shot-title">Inés</span><span class="shot-meta">Retrato de estudio, 2026</span></span>
+          </button>
+        </li>
+        <li class="shot s-4 drop" data-cat="eventos" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=70&w=900&h=1125"
+                srcset="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=70&w=600&h=750 600w,
+                        https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=70&w=900&h=1125 900w"
+                sizes="(max-width: 720px) 92vw, 34vw"
+                alt="Novia sosteniendo un ramo a contraluz en penumbra">
+            </span>
+            <span class="shot-info"><span class="shot-title">Antes del sí</span><span class="shot-meta">Boda en el Delta, 2025</span></span>
+          </button>
+        </li>
+        <li class="shot s-8" data-cat="eventos" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&q=80&w=2400">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=70&w=1600&h=1067"
+                srcset="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=70&w=900&h=600 900w,
+                        https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&q=70&w=1600&h=1067 1600w"
+                sizes="(max-width: 720px) 100vw, 66vw"
+                alt="Público a contraluz frente a un escenario con luces cálidas y humo">
+            </span>
+            <span class="shot-info"><span class="shot-title">Contraluz</span><span class="shot-meta">Festival de Cine de Bahía Sur, 2025</span></span>
+          </button>
+        </li>
+        <li class="shot s-5" data-cat="retrato" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=70&w=1000&h=1250"
+                srcset="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=70&w=640&h=800 640w,
+                        https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=70&w=1000&h=1250 1000w"
+                sizes="(max-width: 720px) 92vw, 42vw"
+                alt="Retrato de una mujer iluminada con luz azul fría">
+            </span>
+            <span class="shot-info"><span class="shot-title">Hora azul</span><span class="shot-meta">Retrato, serie personal, 2026</span></span>
+          </button>
+        </li>
+        <li class="shot s-7 drop" data-cat="editorial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&q=80&w=2200">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=70&w=1400&h=933"
+                srcset="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=70&w=800&h=533 800w,
+                        https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=70&w=1400&h=933 1400w"
+                sizes="(max-width: 720px) 100vw, 58vw"
+                alt="Modelo con pantalón a rayas posando contra una pared turquesa">
+            </span>
+            <span class="shot-info"><span class="shot-title">Turquesa</span><span class="shot-meta">Editorial. Casa Ulme, verano 2026</span></span>
+          </button>
+        </li>
+        <li class="shot s-8" data-cat="comercial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&q=80&w=2400">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=70&w=1600&h=1067"
+                srcset="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=70&w=900&h=600 900w,
+                        https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=70&w=1600&h=1067 1600w"
+                sizes="(max-width: 720px) 100vw, 66vw"
+                alt="Perchero con prendas en tonos crudos contra una pared blanca">
+            </span>
+            <span class="shot-info"><span class="shot-title">Perchero</span><span class="shot-meta">Comercial. Lookbook Casa Ulme, 2025</span></span>
+          </button>
+        </li>
+        <li class="shot s-4 drop" data-cat="retrato" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=900&h=1125"
+                srcset="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=600&h=750 600w,
+                        https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=70&w=900&h=1125 900w"
+                sizes="(max-width: 720px) 92vw, 34vw"
+                alt="Retrato de un hombre sonriendo levemente, fondo gris">
+            </span>
+            <span class="shot-info"><span class="shot-title">Tomás</span><span class="shot-meta">Retrato para prensa, 2025</span></span>
+          </button>
+        </li>
+        <li class="shot s-5 drop" data-cat="editorial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=70&w=1000&h=1250"
+                srcset="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=70&w=640&h=800 640w,
+                        https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=70&w=1000&h=1250 1000w"
+                sizes="(max-width: 720px) 92vw, 42vw"
+                alt="Mujer con abrigo celeste frente a una catedral gótica">
+            </span>
+            <span class="shot-info"><span class="shot-title">Viaje en azul</span><span class="shot-meta">Editorial. Revista Pampa, 2025</span></span>
+          </button>
+        </li>
+        <li class="shot s-7" data-cat="eventos" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&q=80&w=2200">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=70&w=1400&h=933"
+                srcset="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=70&w=800&h=533 800w,
+                        https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&q=70&w=1400&h=933 1400w"
+                sizes="(max-width: 720px) 100vw, 58vw"
+                alt="Lluvia de confeti sobre el público de un recital">
+            </span>
+            <span class="shot-info"><span class="shot-title">Último tema</span><span class="shot-meta">Lanzamiento de disco, 2024</span></span>
+          </button>
+        </li>
+        <li class="shot s-4" data-cat="comercial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&q=80&w=2000">
+            <span class="shot-frame r-45">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=70&w=900&h=1125"
+                srcset="https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=70&w=600&h=750 600w,
+                        https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=70&w=900&h=1125 900w"
+                sizes="(max-width: 720px) 92vw, 34vw"
+                alt="Hombre sentado frente a una abertura circular en un muro claro">
+            </span>
+            <span class="shot-info"><span class="shot-title">Círculo</span><span class="shot-meta">Comercial. Ediciones Sur, 2024</span></span>
+          </button>
+        </li>
+        <li class="shot s-8 drop" data-cat="comercial" data-reveal>
+          <button class="shot-btn" type="button" data-full="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&q=80&w=2400">
+            <span class="shot-frame r-32">
+              <img loading="lazy" decoding="async" draggable="false"
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=70&w=1600&h=1067"
+                srcset="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=70&w=900&h=600 900w,
+                        https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=70&w=1600&h=1067 1600w"
+                sizes="(max-width: 720px) 100vw, 66vw"
+                alt="Cámara y lentes negros sobre una superficie oscura">
+            </span>
+            <span class="shot-info"><span class="shot-title">Óptica</span><span class="shot-meta">Comercial. Producto para Lumbre Foto, 2024</span></span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ESCENA: Cine (scroll horizontal) -->
+    <section class="scene scene--dark cine" id="cine" data-scene="Cine">
+      <header class="scene-head">
+        <h2 class="scene-title" data-reveal="title">Cine<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+        <p class="scene-intro" data-reveal>Cortometrajes, spots y videoclips. Tocá un cuadro para reproducirlo; el video se carga recién ahí.</p>
+      </header>
+
+      <div class="reel-wrap">
+        <ul class="reel" data-reel>
+          <li class="reel-item" data-reveal>
+            <button class="reel-btn" type="button"
+              data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              data-title="Kilómetro cero" data-meta="Cortometraje de ficción, 2025. Dirección y fotografía.">
+              <span class="reel-frame">
+                <img loading="lazy" decoding="async" draggable="false"
+                  src="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?auto=format&fit=crop&q=70&w=1600&h=669"
+                  srcset="https://images.unsplash.com/photo-1477346611705-65d1883cee1e?auto=format&fit=crop&q=70&w=900&h=506 900w,
+                          https://images.unsplash.com/photo-1477346611705-65d1883cee1e?auto=format&fit=crop&q=70&w=1600&h=669 1600w"
+                  sizes="(max-width: 720px) 86vw, 68vw"
+                  alt="">
+                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg></span>
+                <span class="reel-runtime">14:08</span>
+              </span>
+              <span class="reel-title">Kilómetro cero</span>
+              <span class="reel-meta">Cortometraje de ficción, 2025. Dirección y fotografía.</span>
+            </button>
+          </li>
+          <li class="reel-item" data-reveal>
+            <button class="reel-btn" type="button"
+              data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              data-title="Lo que queda del invierno" data-meta="Cortometraje, 2024. Dirección de fotografía para Estudio Norte.">
+              <span class="reel-frame">
+                <img loading="lazy" decoding="async" draggable="false"
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=70&w=1600&h=669"
+                  srcset="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=70&w=900&h=506 900w,
+                          https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&q=70&w=1600&h=669 1600w"
+                  sizes="(max-width: 720px) 86vw, 68vw"
+                  alt="">
+                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg></span>
+                <span class="reel-runtime">18:42</span>
+              </span>
+              <span class="reel-title">Lo que queda del invierno</span>
+              <span class="reel-meta">Cortometraje, 2024. Dirección de fotografía para Estudio Norte.</span>
+            </button>
+          </li>
+          <li class="reel-item" data-reveal>
+            <button class="reel-btn" type="button"
+              data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              data-title="Ciudad en vela" data-meta="Spot para Cervecería Ladera, 2026. Dirección y cámara.">
+              <span class="reel-frame">
+                <img loading="lazy" decoding="async" draggable="false"
+                  src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=70&w=1600&h=669"
+                  srcset="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=70&w=900&h=506 900w,
+                          https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=70&w=1600&h=669 1600w"
+                  sizes="(max-width: 720px) 86vw, 68vw"
+                  alt="">
+                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg></span>
+                <span class="reel-runtime">0:45</span>
+              </span>
+              <span class="reel-title">Ciudad en vela</span>
+              <span class="reel-meta">Spot para Cervecería Ladera, 2026. Dirección y cámara.</span>
+            </button>
+          </li>
+          <li class="reel-item" data-reveal>
+            <button class="reel-btn" type="button"
+              data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              data-title="Ruido blanco" data-meta="Videoclip, 2025. Fotografía y montaje.">
+              <span class="reel-frame">
+                <img loading="lazy" decoding="async" draggable="false"
+                  src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=70&w=1600&h=669"
+                  srcset="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=70&w=900&h=506 900w,
+                          https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=70&w=1600&h=669 1600w"
+                  sizes="(max-width: 720px) 86vw, 68vw"
+                  alt="">
+                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg></span>
+                <span class="reel-runtime">3:56</span>
+              </span>
+              <span class="reel-title">Ruido blanco</span>
+              <span class="reel-meta">Videoclip, 2025. Fotografía y montaje.</span>
+            </button>
+          </li>
+          <li class="reel-item" data-reveal>
+            <button class="reel-btn" type="button"
+              data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              data-title="Mareas" data-meta="Documental corto, 2023. Cámara y color.">
+              <span class="reel-frame">
+                <img loading="lazy" decoding="async" draggable="false"
+                  src="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&q=70&w=1600&h=669"
+                  srcset="https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&q=70&w=900&h=506 900w,
+                          https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&q=70&w=1600&h=669 1600w"
+                  sizes="(max-width: 720px) 86vw, 68vw"
+                  alt="">
+                <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M7 4.5v15L19.5 12z" fill="currentColor"/></svg></span>
+                <span class="reel-runtime">9:20</span>
+              </span>
+              <span class="reel-title">Mareas</span>
+              <span class="reel-meta">Documental corto, 2023. Cámara y color.</span>
+            </button>
+          </li>
+        </ul>
+        <div class="reel-controls">
+          <button class="text-btn" type="button" data-reel-prev>Anterior</button>
+          <span class="reel-count" data-reel-count aria-live="polite">1 de 5</span>
+          <button class="text-btn" type="button" data-reel-next>Siguiente</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA: Sobre mí -->
+    <section class="scene scene--paper about" id="sobre-mi" data-scene="Sobre mí">
+      <div class="about-grid">
+        <figure class="about-portrait" data-reveal>
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=70&w=1000&h=1250"
+            srcset="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=70&w=640&h=800 640w,
+                    https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=70&w=1000&h=1250 1000w"
+            sizes="(max-width: 720px) 92vw, 40vw"
+            alt="El fotógrafo sosteniendo una cámara frente a la cara, en un bosque otoñal">
+          <figcaption>Autorretrato en el Delta, otoño de 2026.</figcaption>
+        </figure>
+
+        <div class="about-text">
+          <h2 class="scene-title" data-reveal="title">Sobre mí<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+          <p class="about-lede" data-reveal>Empecé sacando fotos de recitales con una cámara prestada y terminé dirigiendo la fotografía de cortometrajes. En el camino aprendí que la mejor luz casi nunca es la que uno trae.</p>
+          <p data-reveal>Hoy reparto el tiempo entre la foto fija (editoriales, retratos y campañas) y el cine: ficción, documental y piezas para marcas. Me interesa que una imagen funcione sola, pero también que sea parte de una historia más larga.</p>
+          <p data-reveal>Trabajo directo con directores de arte, agencias y productoras, o de punta a punta cuando el proyecto lo pide.</p>
+
+          <h3 class="sub-title" data-reveal>Cómo trabajo</h3>
+          <dl class="principles" data-reveal>
+            <dt>Primero, la luz que ya está</dt>
+            <dd>Antes de prender un equipo miro qué ofrece el lugar. Casi siempre alcanza con corregirla.</dd>
+            <dt>Equipos chicos</dt>
+            <dd>Menos gente en el set es más confianza frente a cámara. Los retratos y los documentales lo agradecen.</dd>
+            <dt>Cada encuadre con una razón</dt>
+            <dd>La cámara se mueve cuando la historia lo necesita, no porque quede lindo en un reel.</dd>
+          </dl>
+
+          <h3 class="sub-title" data-reveal>Equipo propio</h3>
+          <p class="gear" data-reveal>Sony FX3 y A7 IV, Leica Q2, lentes Sigma Art y anamórficos Atlas Orion, luces Aputure, gimbal DJI RS3. Para producciones grandes trabajo con casas de alquiler de confianza.</p>
+
+          <p class="signature" data-reveal>C. S.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA: Experiencia -->
+    <section class="scene scene--dark cv" id="experiencia" data-scene="Experiencia">
+      <header class="scene-head">
+        <h2 class="scene-title" data-reveal="title">Experiencia<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+        <div class="scene-intro" data-reveal>
+          <p>Proyectos, clientes y reconocimientos de los últimos años.</p>
+          <a class="text-link" href="cv-cs-film.pdf" download>Descargar CV en PDF</a>
+        </div>
+      </header>
+
+      <div class="cv-block" data-reveal>
+        <h3 class="sub-title">Proyectos destacados</h3>
+        <table class="cv-table">
+          <thead>
+            <tr><th scope="col">Año</th><th scope="col">Proyecto</th><th scope="col">Rol</th><th scope="col">Cliente</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="cv-year">2026</td><td class="cv-project">Campaña otoño-invierno “Ciudad en vela”</td><td>Dirección y cámara</td><td>Cervecería Ladera</td></tr>
+            <tr><td class="cv-year">2026</td><td class="cv-project">Editorial “Amarillo de mediodía”</td><td>Fotografía</td><td>Revista Pampa</td></tr>
+            <tr><td class="cv-year">2025</td><td class="cv-project"><em>Kilómetro cero</em>, cortometraje de ficción</td><td>Dirección y fotografía</td><td>Producción independiente</td></tr>
+            <tr><td class="cv-year">2025</td><td class="cv-project">Cobertura oficial y aftermovie</td><td>Fotografía y video</td><td>Festival de Cine de Bahía Sur</td></tr>
+            <tr><td class="cv-year">2024</td><td class="cv-project"><em>Lo que queda del invierno</em>, cortometraje</td><td>Dirección de fotografía</td><td>Estudio Norte</td></tr>
+            <tr><td class="cv-year">2023</td><td class="cv-project">Lookbook y contenido para redes, temporada completa</td><td>Fotografía y video</td><td>Casa Ulme</td></tr>
+            <tr><td class="cv-year">2022</td><td class="cv-project">Serie documental <em>Oficios del río</em>, 6 episodios</td><td>Primer asistente de cámara</td><td>Canal Litoral</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cv-split">
+        <div class="cv-block" data-reveal>
+          <h3 class="sub-title">Premios y exhibiciones</h3>
+          <table class="cv-table cv-table--short">
+            <thead>
+              <tr><th scope="col">Año</th><th scope="col">Reconocimiento</th><th scope="col">Dónde</th></tr>
+            </thead>
+            <tbody>
+              <tr><td class="cv-year">2025</td><td class="cv-project">Selección oficial, <em>Kilómetro cero</em></td><td>Festival de Cine de Bahía Sur</td></tr>
+              <tr><td class="cv-year">2024</td><td class="cv-project">Mención a mejor fotografía</td><td>Muestra Joven de Cine</td></tr>
+              <tr><td class="cv-year">2023</td><td class="cv-project">“Luz de tarde”, muestra colectiva</td><td>Galería Ojo Abierto</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="cv-block" data-reveal>
+          <h3 class="sub-title">Marcas y medios</h3>
+          <ul class="clients">
+            <li>Revista Pampa</li>
+            <li>Casa Ulme</li>
+            <li>Cervecería Ladera</li>
+            <li>Estudio Norte</li>
+            <li>Ediciones Sur</li>
+            <li>Canal Litoral</li>
+            <li>Lumbre Foto</li>
+            <li>Festival de Cine de Bahía Sur</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCENA: Servicios -->
+    <section class="scene scene--paper services" id="servicios" data-scene="Servicios">
+      <header class="scene-head">
+        <h2 class="scene-title" data-reveal="title">Servicios<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+        <p class="scene-intro" data-reveal>Para marcas, agencias, productoras y personas. Cada presupuesto se arma a medida; esto es lo que suele incluir cada trabajo.</p>
+      </header>
+
+      <ul class="service-list">
+        <li class="service" data-reveal>
+          <h3 class="service-name">Fotografía editorial y de campaña</h3>
+          <p class="service-desc">Moda, producto y marca. Busco locaciones, armo el plan de luz y coordino con dirección de arte. Incluye retoque.</p>
+          <p class="service-out">Entre 20 y 40 imágenes finales en 7 días hábiles.</p>
+        </li>
+        <li class="service" data-reveal>
+          <h3 class="service-name">Retrato</h3>
+          <p class="service-desc">Personal, artístico o para prensa. En estudio o en un lugar que diga algo de vos.</p>
+          <p class="service-out">10 a 15 imágenes en 5 días hábiles.</p>
+        </li>
+        <li class="service" data-reveal>
+          <h3 class="service-name">Producción audiovisual</h3>
+          <p class="service-desc">Spots, contenido para redes y videoclips. De la idea a la entrega: guion técnico, rodaje, montaje y color.</p>
+          <p class="service-out">Piezas en 2 a 3 semanas, en todos los formatos que necesites.</p>
+        </li>
+        <li class="service" data-reveal>
+          <h3 class="service-name">Dirección de fotografía</h3>
+          <p class="service-desc">Para cortometrajes, ficción y documental. Me sumo desde la preproducción para diseñar la imagen con dirección.</p>
+          <p class="service-out">Con equipo propio o de alquiler, según el proyecto.</p>
+        </li>
+        <li class="service" data-reveal>
+          <h3 class="service-name">Cobertura de eventos</h3>
+          <p class="service-desc">Festivales, lanzamientos, recitales y bodas. Foto y video sin interrumpir lo que está pasando.</p>
+          <p class="service-out">Selección de fotos en 72 h. Aftermovie en una semana.</p>
+        </li>
+        <li class="service" data-reveal>
+          <h3 class="service-name">Postproducción y color</h3>
+          <p class="service-desc">Montaje, corrección de color y retoque, también para material que no filmé yo.</p>
+          <p class="service-out">Plazo según volumen. Te paso un estimado al ver el material.</p>
+        </li>
+      </ul>
+
+      <div class="process" data-reveal>
+        <h3 class="sub-title">Cómo es trabajar juntos</h3>
+        <ol class="process-steps">
+          <li><span class="step-n">1</span><strong>Charla</strong><span>Me contás la idea, los tiempos y el uso de las imágenes. 30 minutos, sin cargo.</span></li>
+          <li><span class="step-n">2</span><strong>Propuesta</strong><span>En 48 h recibís presupuesto y una referencia visual de cómo lo imagino.</span></li>
+          <li><span class="step-n">3</span><strong>Preproducción</strong><span>Locaciones, plan de rodaje, equipo y todo lo que evita sorpresas el día de rodaje.</span></li>
+          <li><span class="step-n">4</span><strong>Rodaje</strong><span>Un día bien planificado rinde más que tres improvisados.</span></li>
+          <li><span class="step-n">5</span><strong>Entrega</strong><span>Material final con una ronda de ajustes incluida.</span></li>
+        </ol>
+        <a class="btn btn--dark" href="#contacto">Pedir presupuesto</a>
+      </div>
+    </section>
+
+    <!-- ESCENA: Contacto -->
+    <section class="scene scene--dark contact" id="contacto" data-scene="Contacto">
+      <header class="scene-head scene-head--contact">
+        <h2 class="scene-title contact-title" data-reveal="title">Contame qué querés filmar<span class="tc-in" data-tc-in aria-hidden="true"></span></h2>
+      </header>
+
+      <div class="contact-grid">
+        <!--
+          Envío del formulario:
+          - Con un servicio (Formspree, Getform, endpoint propio): poné la URL en data-endpoint.
+          - Sin data-endpoint, el formulario abre el cliente de correo con el mensaje armado hacia data-mailto.
+        -->
+        <form class="contact-form" data-contact-form data-endpoint="" data-mailto="hola@csfilm.com.ar" novalidate>
+          <div class="field" data-reveal>
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="nombre" type="text" autocomplete="name" required>
+            <p class="field-error" id="f-name-err" hidden>Escribí tu nombre para saber a quién respondo.</p>
+          </div>
+          <div class="field" data-reveal>
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+            <p class="field-error" id="f-email-err" hidden>Revisá el email: necesito uno válido para responderte.</p>
+          </div>
+          <div class="field" data-reveal>
+            <label for="f-company">Marca, agencia o productora <span class="optional">(opcional)</span></label>
+            <input id="f-company" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="field" data-reveal>
+            <label for="f-type">Tipo de proyecto</label>
+            <select id="f-type" name="tipo">
+              <option>Fotografía editorial o campaña</option>
+              <option>Retrato</option>
+              <option>Producción audiovisual</option>
+              <option>Dirección de fotografía</option>
+              <option>Cobertura de evento</option>
+              <option>Postproducción y color</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field" data-reveal>
+            <label for="f-date">Fecha estimada</label>
+            <input id="f-date" name="fecha" type="text" placeholder="Ej.: segunda quincena de marzo">
+          </div>
+          <div class="field" data-reveal>
+            <label for="f-budget">Presupuesto</label>
+            <select id="f-budget" name="presupuesto">
+              <option>Todavía no lo sé</option>
+              <option>Hasta USD 1.000</option>
+              <option>USD 1.000 a 3.000</option>
+              <option>Más de USD 3.000</option>
+            </select>
+          </div>
+          <div class="field field--full" data-reveal>
+            <label for="f-msg">Contame del proyecto</label>
+            <textarea id="f-msg" name="mensaje" rows="5" required placeholder="Qué querés hacer, para qué se va a usar y cualquier referencia que tengas."></textarea>
+            <p class="field-error" id="f-msg-err" hidden>Sumá unas líneas sobre el proyecto así puedo armar una propuesta.</p>
+          </div>
+          <div class="form-foot field--full" data-reveal>
+            <button class="btn" type="submit">Enviar consulta</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <aside class="contact-info" aria-label="Datos de contacto">
+          <dl>
+            <div data-reveal>
+              <dt>Email</dt>
+              <dd><a href="mailto:hola@csfilm.com.ar">hola@csfilm.com.ar</a></dd>
+            </div>
+            <div data-reveal>
+              <dt>WhatsApp</dt>
+              <dd><a href="https://wa.me/5491100000000">+54 9 11 0000 0000</a></dd>
+            </div>
+            <div data-reveal>
+              <dt>Agenda</dt>
+              <dd><span class="dot" aria-hidden="true"></span>Tomando proyectos desde febrero 2027. Respondo en menos de 48 h hábiles.</dd>
+            </div>
+            <div data-reveal>
+              <dt>Base</dt>
+              <dd>Buenos Aires. Viajo por Argentina y la región.</dd>
+            </div>
+            <div data-reveal>
+              <dt>Redes</dt>
+              <dd>
+                <ul class="socials">
+                  <li><a href="https://instagram.com/" rel="noopener" target="_blank">Instagram</a></li>
+                  <li><a href="https://vimeo.com/" rel="noopener" target="_blank">Vimeo</a></li>
+                  <li><a href="https://behance.net/" rel="noopener" target="_blank">Behance</a></li>
+                  <li><a href="https://linkedin.com/" rel="noopener" target="_blank">LinkedIn</a></li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span data-year>2026</span> CS Film. Fotografía y cine.</p>
+    <a class="text-link" href="#inicio">Volver al inicio</a>
+  </footer>
+
+  <!-- Visor de fotos y videos -->
+  <dialog class="lightbox" data-lightbox aria-label="Visor de trabajos">
+    <div class="lb-top">
+      <p class="lb-count" data-lb-count></p>
+      <button class="text-btn" type="button" data-lb-close>Cerrar</button>
+    </div>
+    <div class="lb-stage" data-lb-stage tabindex="-1"></div>
+    <div class="lb-bottom">
+      <div class="lb-caption">
+        <p class="lb-title" data-lb-title></p>
+        <p class="lb-meta" data-lb-meta></p>
+      </div>
+      <div class="lb-nav" data-lb-nav>
+        <button class="text-btn" type="button" data-lb-prev>Anterior</button>
+        <button class="text-btn" type="button" data-lb-next>Siguiente</button>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
